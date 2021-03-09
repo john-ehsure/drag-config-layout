@@ -9,7 +9,7 @@
 # install
 npm install --save drag-config-layout
 ```
-## vueDragInfinite 引入方式
+## drag-config-layout 引入方式
 ``` js
 //全局引入
 import Vue from 'vue'
