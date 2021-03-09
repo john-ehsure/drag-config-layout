@@ -118,9 +118,9 @@
           save() {
             let resultJson = this.$refs.draggable_name.searchSpace()
             if (resultJson.isAre) { // 如果有空间 新增
-              console.log('还有剩余空间未填写，是否继续保存')
+              alert('还有剩余空间未填写，是否继续保存')
             } else {
-              console.log('保存成功！')
+              alert('保存成功！')
               this.isEdit = false
             }
           },
@@ -159,7 +159,7 @@
 
               this.homeDragList.push(newDragItem)
             } else { // 如果没有 提示
-              console.log(`没有可用空间，请先预留好${w}*${h}位置`)
+              alert(`没有可用空间，请先预留好${w}*${h}位置`)
             }
           },
           /*
