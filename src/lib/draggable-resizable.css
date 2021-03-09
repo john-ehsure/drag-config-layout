@@ -1,0 +1,96 @@
+.vdr {
+  touch-action: none;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px dashed #d6d6d6;
+}
+.handle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border: 1px solid #333;
+  box-shadow: 0 0 2px #bbb;
+}
+.handle-tl {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+.handle-tm {
+  top: -5px;
+  left: calc(50% - 4px);
+  cursor: n-resize;
+}
+.handle-tr {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+.handle-ml {
+  top: calc(50% - 4px);
+  left: -5px;
+  cursor: w-resize;
+}
+.handle-mr {
+  top: calc(50% - 4px);
+  right: -5px;
+  cursor: e-resize;
+}
+.handle-bl {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+.handle-bm {
+  bottom: -5px;
+  left: calc(50% - 4px);
+  cursor: s-resize;
+}
+.handle-br {
+  bottom: -5px;
+  right: -5px;
+  cursor: se-resize;
+}
+.draggable_custom_handle{
+  position: absolute;
+  height: 18px !important;
+  width: 18px !important;
+  box-model: border-box;
+  -webkit-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 99;
+}
+.draggable_custom_handle.draggable_custom_handle-br {
+   bottom: 20px !important;
+   right: 20px !important;
+   cursor: se-resize;
+}
+.draggable_custom_handle.draggable_custom_handle-br img{
+  width: 18px;
+  height: 18px;
+}
+
+.ref-line{
+  position: absolute;
+  background-color: rgb(255, 0, 204);
+  z-index: 9999;
+}
+.v-line{
+  width: 1px;
+}
+.h-line{
+  height: 1px;
+}
+@media only screen and (max-width: 768px) {
+  [class*="handle-"]:before {
+    content: '';
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    top: -10px;
+    position: absolute;
+  }
+}
