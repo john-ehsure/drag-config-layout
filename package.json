@@ -1,7 +1,7 @@
 {
   "name": "drag-config-layout",
   "description": "This is a drag-and-drop configuration of the page layout,so that users can customize their own look",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "(zsq <615683167@qq.com>)",
   "license": "MIT",
   "private": false,
