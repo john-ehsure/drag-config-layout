@@ -1,7 +1,8 @@
 # drag-config-layout
 
 > This is a drag-and-drop configuration of the page layout,so that users can customize their own look
->当前插件基于vue 2.*，无需任何其他依赖
+>
+>当前插件基于vue 2+，无需任何其他依赖
 
 ## installation
 ```js
@@ -31,10 +32,10 @@ Vue.use(dragConfigLayout)
             @changing="dragChanging"
             @change="dragChange">
       <div slot="waitName" style="height: 100%">
-        <wait-name></wait-name>
+        <div class="waitname">我是一个等待的自定义组件</div>
       </div>
       <div slot="dateName" style="height: 100%">
-        <date-name></date-name>
+        <div class="datename">我是一个时间的自定义组件</div>
       </div>
 
     </drag-config-layout>
@@ -56,12 +57,8 @@ Vue.use(dragConfigLayout)
 
 <script>
 
-const waitName = {template: `<div class="waitname">我是一个等待的自定义组件</div>`}
-const dateName = {template: `<div class="waitname">我是一个时间的自定义组件</div>`}
-
 export default {
     name: 'dragpage',
-    components: {waitName,dateName},
     data(){
         return{
           isEdit: true, // 是否为编辑模式
@@ -220,4 +217,4 @@ export default {
 | dragChanging  | 拖拽放大过程中方法的回调 操作的当前对象  |   (item) 操作的当前对象   |
 | dragChange   |   移动放大结束后方法的回调  |   (item,data) item 为当前操作的数据   data为整体数据   |
 | searchSpace   |  通过ref的形式 检索空白区域是否符合  |   参数说明 w代表宽度  h 代表长度 默认为1,返回值说明  isAre 是否有符合条件的空间,sameXArr x轴方向符合的空间  起始点取第一个,sameYArr y轴方向符合的空间  起始点取第一个 |
-|deleteDrag| 删除当前模块的回调 | （item,index）item当前操作的模块，index索引值 |
+|deldrag| 删除当前模块的回调 | （item,index）item当前操作的模块，index索引值 |
