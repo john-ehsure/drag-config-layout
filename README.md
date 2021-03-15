@@ -214,7 +214,7 @@ export default {
 
 | 方法名        | 说明    |  参数   |
 | --------    | :----- | :---- |
-| dragChanging  | 拖拽放大过程中方法的回调 操作的当前对象  |   (item) 操作的当前对象   |
-| dragChange   |   移动放大结束后方法的回调  |   (item,data) item 为当前操作的数据   data为整体数据   |
+| changing  | 拖拽放大过程中方法的回调 操作的当前对象  |   (item) 操作的当前对象   |
+| change   |   移动放大结束后方法的回调  |   (item,data) item 为当前操作的数据   data为整体数据   |
 | searchSpace   |  通过ref的形式 检索空白区域是否符合  |   参数说明 w代表宽度  h 代表长度 默认为1,返回值说明  isAre 是否有符合条件的空间,sameXArr x轴方向符合的空间  起始点取第一个,sameYArr y轴方向符合的空间  起始点取第一个 |
 |deldrag| 删除当前模块的回调 | （item,index）item当前操作的模块，index索引值 |
